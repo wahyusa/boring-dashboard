@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .default-row {
+    grid-template-rows: auto 1fr;
+  }
+  .col-mobile {
+    grid-template-columns: 1fr;
+  }
+  .col-desktop {
+    grid-template-columns: minmax(250px, 290px) 4fr;
+  }
+  .col-desktop-pushed-sidebar {
+    grid-template-columns: 1fr;
+  }
+  .area-mobile {
+    grid-template-areas:
+      "top-nav"
+      "main-content";
+  }
+  .area-desktop {
+    grid-template-areas:
+      "side-nav top-nav"
+      "side-nav main-content";
+  }
+  .area-desktop-pushed-sidebar {
+    grid-template-areas:
+      "top-nav"
+      "main-content";
+  }
+}
+
+.top-nav {
+  grid-area: top-nav; /* set the area for the top navigation */
+}
+
+.side-nav {
+  @apply hidden lg:grid;
+  grid-area: side-nav; /* set the area for the side navigation */
+}
+
+.main-content {
+  grid-area: main-content; /* set the area for the main content */
+}
