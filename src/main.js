@@ -13,8 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", updateHeight);
 });
 
-document
-  .getElementsByTagName("form")[0]
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
-  });
+// if there is a form on the page, prevent it from submitting
+const loginForm = document.getElementsByTagName("form")[0];
+
+loginForm
+  ? document
+      .getElementsByTagName("form")[0]
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+      })
+  : "";
