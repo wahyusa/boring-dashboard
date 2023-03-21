@@ -4,28 +4,385 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@0.1.5/teal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@0.1.5/sage.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@0.1.5/tealDark.css"
+    /> -->
   </head>
-  <body>
-    <div class="grid grid-cols-1 lg:grid-cols-2">
-      <aside class="border-2 border-yellow-600 fixed w-[290px] inset-y-0">
-        <!-- Sidebar -->
-        Sidebar
+  <body class="bg-[var(--sage1)] radix">
+    <div class="relative">
+      <aside
+        class="isolate transition-all bg-[var(--teal2)] duration-300 fixed inset-y-0 z-10 h-[96vh] w-[15.875rem] overflow-y-auto border-r border-[var(--teal8)]/50"
+      >
+        <div
+          class="p-4 flex justify-center sticky min-h-[4rem] max-h-[4rem] top-0 z-20 bg-[var(--teal1)] shadow shadow-bg-[var(--sage1)]"
+        >
+          <img
+            class="w-10 h-10"
+            src="https://asset.brandfetch.io/idrTwJGyTb/idMLQ84A_n.svg"
+          />
+        </div>
+
+        <div class="relative overflow-x-hidden">
+          <ul class="flex flex-col justify-center">
+            <a
+              href="#!"
+              class="inline-flex bg-[var(--teal5)] hover:bg-[var(--teal4)] gap-4 items-center transition-all duration-300 whitespace-nowrap px-4 py-2"
+            >
+              <svg
+                class="shrink-0 w-6 h-6 fill-zinc-100"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                />
+                <path
+                  d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                />
+              </svg>
+              <span>Dashboard</span>
+            </a>
+            <a
+              href="#!"
+              class="inline-flex gap-4 hover:bg-[var(--teal4)] items-center transition-all duration-300 whitespace-nowrap px-4 py-2"
+            >
+              <svg
+                class="shrink-0 w-6 h-6 fill-zinc-100"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <ellipse
+                  cx="256"
+                  cy="128"
+                  rx="192"
+                  ry="80"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                />
+                <path
+                  d="M448 214c0 44.18-86 80-192 80S64 258.18 64 214M448 300c0 44.18-86 80-192 80S64 344.18 64 300"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                />
+                <path
+                  d="M64 127.24v257.52C64 428.52 150 464 256 464s192-35.48 192-79.24V127.24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                />
+              </svg>
+              <span>Master Data</span>
+            </a>
+            <a
+              href="#!"
+              class="inline-flex gap-4 hover:bg-[var(--teal4)] items-center transition-all duration-300 whitespace-nowrap px-4 py-2"
+            >
+              <svg
+                class="shrink-0 w-6 h-6 fill-zinc-100"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M440 432H72a40 40 0 01-40-40V120a40 40 0 0140-40h75.89a40 40 0 0122.19 6.72l27.84 18.56a40 40 0 0022.19 6.72H440a40 40 0 0140 40v240a40 40 0 01-40 40zM32 192h448"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                />
+              </svg>
+              <span>PDF Archieve</span>
+            </a>
+          </ul>
+          <div
+            id="bottomAside"
+            class="fixed transition-all duration-300 bottom-0 flex w-[15.875rem] text-sm uppercase font-bold px-4 py-2 bg-[var(--teal4)] text-[var(--teal11)]"
+          >
+            Exit
+          </div>
+        </div>
       </aside>
-      <section class="ml-[290px] grid">
-        <header class="border-2 border-red-600">
-          <!-- Top nav -->
-          Top Nav
+      <main
+        class="transition-all duration-300 relative z-0 min-h-screen bg-[var(--sage1)] pl-[15.875rem]"
+      >
+        <header
+          class="sticky max-h-[4rem] top-0 w-full bg-[var(--sage1)] text-[var(--teal12)] shadow shadow-bg-[var(--sage1)]"
+        >
+          <div class="flex items-center justify-between p-4">
+            <button
+              id="triggerCollapse"
+              type="button"
+              class="px-4 py-1.5 bg-[var(--teal2)] rounded-full hover:bg-[var(--teal3)] hover:shadow"
+            >
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                  d="M80 160h352M80 256h352M80 352h352"
+                />
+              </svg>
+            </button>
+            <h1 class="font-bold text-3xl">Dashboard</h1>
+            <nav class="flex items-center gap-4">
+              <a
+                href="#!"
+                class="px-4 py-1.5 bg-[var(--teal2)] rounded-full hover:bg-[var(--teal3)] hover:shadow"
+              >
+                <svg
+                  class="w-6 h-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M427.68 351.43C402 320 383.87 304 383.87 217.35 383.87 138 343.35 109.73 310 96c-4.43-1.82-8.6-6-9.95-10.55C294.2 65.54 277.8 48 256 48s-38.21 17.55-44 37.47c-1.35 4.6-5.52 8.71-9.95 10.53-33.39 13.75-73.87 41.92-73.87 121.35C128.13 304 110 320 84.32 351.43 73.68 364.45 83 384 101.61 384h308.88c18.51 0 27.77-19.61 17.19-32.57zM320 384v16a64 64 0 01-128 0v-16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#!"
+                class="px-4 py-1.5 bg-[var(--teal2)] rounded-full hover:bg-[var(--teal3)] hover:shadow"
+                >John Doe</a
+              >
+            </nav>
+          </div>
         </header>
-        <main class="border-2 border-green-600">
-          <!-- Main content -->
-          Main Content
-        </main>
-        <footer class="border-2 border-blue-600">
-          <!-- Footer -->
-          Footer
-        </footer>
-      </section>
+        <div class="flex items-center gap-6 p-6">
+          <section class="p-4 max-w-xs rounded-lg bg-white shadow">
+            <h2>3.000 Siswa</h2>
+          </section>
+          <section class="p-4 max-w-xs rounded-lg bg-white shadow">
+            <h2>300 Guru</h2>
+          </section>
+          <section class="p-4 max-w-xs rounded-lg bg-white shadow">
+            <h2>30 Staff</h2>
+          </section>
+        </div>
+        <section class="p-4 m-6 rounded-lg bg-white shadow">
+          <div class="flex items-center gap-4">32 April 2023</div>
+          <div
+            class="flex mt-4 justify-between items-center p-4 bg-[var(--teal1)]"
+          >
+            <div class="inline-flex items-center">
+              <div
+                class="px-4 flex items-center gap-2 py-2 bg-[var(--sage1)] shadow"
+              >
+                <svg
+                  class="w-6 h-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M416 221.25V416a48 48 0 01-48 48H144a48 48 0 01-48-48V96a48 48 0 0148-48h98.75a32 32 0 0122.62 9.37l141.26 141.26a32 32 0 019.37 22.62z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                  <path
+                    d="M256 56v120a32 32 0 0032 32h120M176 288h160M176 368h160"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                </svg>
+                <span>Excel</span>
+              </div>
+              <div
+                class="px-4 flex items-center gap-2 py-2 bg-[var(--sage1)] shadow"
+              >
+                <svg
+                  class="w-6 h-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M384 368h24a40.12 40.12 0 0040-40V168a40.12 40.12 0 00-40-40H104a40.12 40.12 0 00-40 40v160a40.12 40.12 0 0040 40h24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                  <rect
+                    x="128"
+                    y="240"
+                    width="256"
+                    height="208"
+                    rx="24.32"
+                    ry="24.32"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                  <path
+                    d="M384 128v-24a40.12 40.12 0 00-40-40H168a40.12 40.12 0 00-40 40v24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                  <circle cx="392" cy="184" r="24" />
+                </svg>
+                <span>Print</span>
+              </div>
+            </div>
+            <div class="inline-flex items-center">
+              <span class="px-4 py-2 bg-[var(--sage1)] shadow">
+                <svg
+                  class="w-6 h-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                    stroke-width="32"
+                  />
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    stroke-width="32"
+                    d="M338.29 338.29L448 448"
+                  />
+                </svg>
+              </span>
+              <span class="px-4 py-2 bg-[var(--sage1)] shadow">
+                <svg
+                  class="w-6 h-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                    d="M256 112v288M400 256H112"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+          <table
+            class="w-full table-auto border-collapse border border-[var(teal8)]"
+          >
+            <thead>
+              <tr>
+                <th class="border border-[var(--teal6)] bg-[var(--teal2)] p-4">
+                  No
+                </th>
+                <th class="border border-[var(--teal6)] bg-[var(--teal2)] p-4">
+                  Nama
+                </th>
+                <th class="border border-[var(--teal6)] bg-[var(--teal2)] p-4">
+                  Kelas
+                </th>
+                <th class="border border-[var(--teal6)] bg-[var(--teal2)] p-4">
+                  Wali Kelas
+                </th>
+                <th class="border border-[var(--teal6)] bg-[var(--teal2)] p-4">
+                  Alamat
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-[var(--teal6)] p-3">1</td>
+                <td class="border border-[var(--teal6)] p-3">John Doe</td>
+                <td class="border border-[var(--teal6)] p-3">1A</td>
+                <td class="border border-[var(--teal6)] p-3">John Doe</td>
+                <td class="border border-[var(--teal6)] p-3">
+                  Jl. Lorem Ipsum
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-[var(--teal6)] p-3">2</td>
+                <td class="border border-[var(--teal6)] p-3">John Doe</td>
+                <td class="border border-[var(--teal6)] p-3">1A</td>
+                <td class="border border-[var(--teal6)] p-3">John Doe</td>
+                <td class="border border-[var(--teal6)] p-3">
+                  Jl. Lorem Ipsum
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-[var(--teal6)] p-3">3</td>
+                <td class="border border-[var(--teal6)] p-3">John Doe</td>
+                <td class="border border-[var(--teal6)] p-3">1A</td>
+                <td class="border border-[var(--teal6)] p-3">John Doe</td>
+                <td class="border border-[var(--teal6)] p-3">
+                  Jl. Lorem Ipsum
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-[var(--teal6)] p-3">4</td>
+                <td class="border border-[var(--teal6)] p-3">John Doe</td>
+                <td class="border border-[var(--teal6)] p-3">1A</td>
+                <td class="border border-[var(--teal6)] p-3">John Doe</td>
+                <td class="border border-[var(--teal6)] p-3">
+                  Jl. Lorem Ipsum
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-[var(--teal6)] p-3">5</td>
+                <td class="border border-[var(--teal6)] p-3">John Doe</td>
+                <td class="border border-[var(--teal6)] p-3">1A</td>
+                <td class="border border-[var(--teal6)] p-3">John Doe</td>
+                <td class="border border-[var(--teal6)] p-3">
+                  Jl. Lorem Ipsum
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
     </div>
+
     <script src="main.js"></script>
   </body>
 </html>

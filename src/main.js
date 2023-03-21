@@ -23,3 +23,15 @@ loginForm
         e.preventDefault();
       })
   : "";
+
+let triggerCollapse = document.getElementById("triggerCollapse");
+
+triggerCollapse.addEventListener("click", function () {
+  const aside = document.getElementsByTagName("aside")[0];
+  const bottomAside = document.getElementById("bottomAside");
+  const main = document.getElementsByTagName("main")[0];
+
+  aside.classList.toggle("w-[4rem]");
+  bottomAside.classList.toggle("w-[4rem]");
+  main.classList.toggle("pl-[4rem]");
+});
